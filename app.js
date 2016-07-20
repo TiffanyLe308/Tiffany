@@ -10,4 +10,20 @@
       return this.tab = tabName;
     };
   });
-});
+
+  app.directive('header', function() {
+    return {
+      restrict: 'A',
+      templateUrl: 'header/header.html'
+    };
+  });
+  
+  app.directive('footer', function () {
+    return {
+      restrict: 'A',
+      templateUrl: 'footer/footer.html'
+    };
+  });
+
+
+})();

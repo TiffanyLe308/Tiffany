@@ -1,0 +1,35 @@
+<nav class='navbar navbar-inverse'>
+  <div class='container-fluid'>
+    <div class='navbar-header'>
+      <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='#myNavbar'>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class='navbar-brand' href='#'>Tiffany</a>
+    </div>
+
+    <div class='collapse navbar-collapse' id='myNavbar'>
+      <ul class='nav navbar-nav' ng-controller='TabController as tab'>
+        <li ng-class='{active:tab.tabName(1)}'>
+          <a href='#' ng-click='tab.settab(1)'>Home</a>
+        </li>
+        <li ng-class='{active:tab.tabName(2)}'>
+          <a href='#' ng-click='tab.settab(2)'>My Blog</a>
+        </li>
+        <li ng-class='{active:tab.tabName(3)'>
+          <a href='#' ng-click='tab.settab(3)'>Contact</a>
+        </li>
+      </ul>
+
+      <ul class='nav navbar-nav navbar-right'>
+        <li ng-class='{active:tab.tabName(4)}'>
+          <a href='#' ng-click='tab.settab(4)'>SignUp</a>
+        </li>
+        <li ng-class='{active:tab.tabName(5)}'>
+          <a href='#' ng-click='tab.settab(5)'>LogIn</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

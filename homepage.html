@@ -1,45 +1,23 @@
 <!doctype html>
-<html ng-app='myApp'>
+<html>
 <head>
-  <script src="app.js"></script>
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 </head>
 
-<body>
-  <nav class='navbar navbar-inverse'>
-    <div class='container-fluid'>
-      <div class='navbar-header'>
-        <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='#myNavbar'>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class='navbar-brand' href='#'></a>
-      </div>
+<body ng-app='myApp'>
 
-      <div class='collapse navbar-collapse' id='myNavbar'>
-        <ul class='nav navbar-nav' ng-controller='TabController as tab'>
-          <li ng-class='{active:tab.tabName(1)}'>
-            <a href='#' ng-click='tab.settab(1)'>Home</a>
-          </li>
-          <li ng-class='{active:tab.tabName(2)}'>
-            <a href='#' ng-click='tab.settab(2)'>My Blog</a>
-          </li>
-          <li ng-class='{active:tab.tabName(3)'>
-            <a href='#' ng-click='tab.settab(3)'>Contact</a>
-          </li>
-        </ul>
+  <div header></div>
 
-        <ul class='nav navbar-nav navbar-right'>
-          <li ng-class='{active:tab.tabName(4)}'>
-            <a href='#' ng-click='tab.settab(4)'>SignUp</a>
-          </li>
-          <li ng-class='{active:tab.tabName(5)}'>
-            <a href='#' ng-click='tab.settab(5)'>LogIn</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+
+
+  <div footer></div>
+
+  <script src="app.js"></script>
 </body>
 </html>
