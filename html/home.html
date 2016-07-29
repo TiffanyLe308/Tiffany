@@ -1,5 +1,4 @@
 <div>
-
   <div class="space"></div>
 
   <div class="container">
@@ -9,6 +8,7 @@
      <div class="col-md-6">
        <img class="img-responsive" src="../images/Pic_7.jpg">
      </div>
+     </br>
      <div class="col-md-4">
        <ul class="skill">
          <li>HTML5</li>
@@ -27,18 +27,18 @@
 
   <div class="container">
     <div class="row">
-       <div class="col-md-5">
-         </br></br></br></br>
+      <h1 class="title"><strong>A little about me</strong></h1>
+      <div class="col-md-5">
+         <img class="img-responsive" src="../images/Pic_1.jpg">
+      </div>
+
+      <div class="col-md-6">
+         </br>
          <p>I'm Tiffany and I am studying to become a front-end developer. </br></br>
          I enjoy spending my spare time sharpening my front-end skills, playing video games or just hanging out with my close friends.</br></br>
          If you are like me and have a passion for web development, you'll feel right at home here on my page.
          </p>
-       </div>
-
-       <div class="col-md-6">
-         <h1 class="pull-right"><strong>A little about me</strong></h1>
-         <img class="img-responsive pull-right" src="../images/Pic_1.jpg">
-       </div>
+      </div>
     </div>
   </div>
 
@@ -46,32 +46,71 @@
 
   <div class="contact">
     <div class="container">
-     <div class="number col-md-6">
+     <div class="col-md-6">
        <p><i class="fa fa-mobile" aria-hidden="true"></i> Phone number: +358 458505591  </br>
          <i class="fa fa-envelope-o" aria-hidden="true"></i> Email: tiffanyle308@gmail.com</p>
      </div>
      <div class="col-md-6">
-       <form role="form-inline">
-         <p class="cont-me"><strong>Contact me</strong></p>
+       <h2>Contact me</h2>
+       <form ng-app="myApp" ng-controller="formController as form" name="userForm" novalidate>
+
+         <!-- name field -->
+         <div class="form-group" ng-class="{ 'has-error': userForm.name.$touched && userForm.name.$invalid }">
+             <label>Name</label>
+             <input type="text" name="name" class="form-control"
+               ng-model="form.name"
+               ng-minlength="5"
+               ng-maxlength="20"
+               placeholder="Tell me your name"
+               required>
+
+             <div class="help-block" ng-messages="userForm.name.$error" ng-if="userForm.name.$touched">
+               <p ng-message="minlength">Your name is too short.</p>
+               <p ng-message="maxlength">Your name is too long.</p>
+               <p ng-message="required">Your name is required.</p>
+             </div>
+         </div>
+
+         <!-- email field -->
+         <div class="form-group" ng-class="{ 'has-error': userForm.email.$touched && userForm.email.$invalid }">
+             <label>Email</label>
+             <input type="email" name="email" class="form-control"
+                 ng-model="form.email"
+                 ng-minlength="11"
+                 ng-maxlength="40"
+                 placeholder="Tell me your email"
+                 required>
+
+             <div class="help-block" ng-messages="userForm.email.$error" ng-if="userForm.email.$touched">
+               <p ng-message="required">This field is required</p>
+               <p ng-message="minlength">This field is too short</p>
+               <p ng-message="maxlength">This field is too long</p>
+               <p ng-message="email">This needs to be a valid email</p>
+             </div>
+         </div>
+
+         <div class="form-group" ng-class="{ 'has-error': userForm.message.$touched && userForm.message.$invalid }">
+             <label>Message</label>
+             <input type="text" name="message" class="form-control"
+                 ng-model="form.message"
+                 ng-minlength="10"
+                 ng-maxlength="5000"
+                 placeholder="Send me a message"
+                 required>
+
+             <div class="help-block" ng-messages="userForm.message.$error" ng-if="userForm.message.$touched" >
+               <p ng-message="minlength">This field is too short</p>
+               <p ng-message="maxlength">This field is too long</p>
+               <p ng-message="required">This field is required</p>
+             </div>
+         </div>
+
          <div class="form-group">
-           <p class="firstname-error"></p>
-           <input type="text" class="form-control" id="firstname" placeholder="First Name" autocomplete="off">
+             <button type="submit" class="btn btn-success">Send</button>
          </div>
-         <div class="form-group">
-           <p class="lastname-error"></p>
-           <input type="text" class="form-control" id="lastname" placeholder="Last Name" autocomplete="off">
-         </div>
-         <div class="form-group">
-           <p class="email-error"></p>
-           <input type="email" class="form-control" id="email" placeholder="Email" autocomplete="off">
-         </div>
-         <div class="message">
-           <p class="message-error"></p>
-           <input type="text" class="form-control" id="message" placeholder="Leave your message" autocomplete="off">
-         </div>
-         </br>
-         <button type="submit" class="btn"><strong>Send</strong></button>
        </form>
+
      </div>
     </div>
   </div>
+</div>

@@ -1,27 +1,84 @@
-<html ng-app='myApp'>
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-      <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-    </head>
-    <body  class="container">
-        <h2>Tiffany</h2>
+<!DOCTYPE html>
+<!doctype html>
+<html ng-app="myApp">
+  <head>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.0.0.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="index.css"/>
 
-        <nav header></nav>
+  </head>
+  <body>
 
-        <div class="container">
-          <div class="display" ui-view></div><!--Content of the navbar -->
+<body class="container" ng-app="myApp" ng-controller="MainCtrl as main">
+  <!-- create our form -->
+    <form class="form" name="userForm" novalidate>
+
+        <!-- name field -->
+        <div class="form-group" ng-class="{ 'has-error': userForm.name.$touched && userForm.name.$invalid }">
+            <label>Name</label>
+            <input type="text" name="name" class="form-control"
+              ng-model="main.name"
+              ng-minlength="5"
+              ng-maxlength="10"
+              placeholder="Tell me your name"
+              required>
+
+            <div class="help-block" ng-messages="userForm.name.$error" ng-if="userForm.name.$touched">
+              <p ng-message="minlength">Your name is too short.</p>
+              <p ng-message="maxlength">Your name is too long.</p>
+              <p ng-message="required">Your name is required.</p>
+            </div>
         </div>
 
-        <div footer></div>
+        <!-- email field -->
+        <div class="form-group" ng-class="{ 'has-error': userForm.email.$touched && userForm.email.$invalid }">
+            <label>Email</label>
+            <input type="email" name="email" class="form-control"
+                ng-model="main.email"
+                ng-minlength="5"
+                ng-maxlength="20"
+                placeholder="Tell me your email"
+                required>
 
+            <!-- ngMessages goes here -->
+            <div class="help-block" ng-messages="userForm.email.$error" ng-if="userForm.email.$touched">
+              <p ng-message="required">This field is required</p>
+              <p ng-message="minlength">This field is too short</p>
+              <p ng-message="maxlength">This field is too long</p>
+              <p ng-message="email">This needs to be a valid email</p>
+            </div>
+        </div>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
-        <script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
-        <script src="app.js"></script>
-    </body>
+        <div class="form-group" ng-class="{ 'has-error': userForm.message.$touched && userForm.message.$invalid }">
+            <label>Message</label>
+            <input type="text" name="message" class="form-control"
+                ng-model="main.message"
+                ng-minlength="10"
+                ng-maxlength="5000"
+                placeholder="Send me a message"
+                required>
+
+            <!-- ngMessages goes here -->
+            <div class="help-block" ng-messages="userForm.message.$error" ng-if="userForm.message.$touched" >
+              <p ng-message="minlength">This field is too short</p>
+              <p ng-message="maxlength">This field is too long</p>
+              <p ng-message="required">This field is required</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-danger">Submit</button>
+        </div>
+
+    </form>
+
+  <!-- load ngmessages -->
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>
+
+  <!-- load our custom app -->
+  <script src="app.js"></script>
+
+</body>
 </html>

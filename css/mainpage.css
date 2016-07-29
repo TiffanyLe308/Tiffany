@@ -39,6 +39,10 @@ html, body {
 }
 
 .space {
+    margin: 40px 0 40px 0;
+}
+
+.space1 {
     margin: 100px 0 100px 0;
 }
 
@@ -46,6 +50,17 @@ html, body {
 
 .emart {
     margin: 60px 0;
+}
+
+/*-------Home-Formvalidation-------*/
+
+
+.ng-dirty.ng-invalid {
+    border-color: red;
+}
+
+.ng-dirty.ng-valid {
+    border-color: blue;
 }
 
 /*-------Footer-------*/
