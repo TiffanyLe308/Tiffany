@@ -6,7 +6,7 @@ html, body {
 /*-------Navbar-------*/
 
 .header {
-    background-color: #818C6D;
+    background-color: #729F98;
     border: none;
     margin: 50px 0 0 0;
 }
@@ -34,8 +34,8 @@ html, body {
     background: -webkit-linear-gradient(left, #C2BA9B, #5e703d, #818C6D);
     background: -o-linear-gradient(right, #C2BA9B, #5e703d, #818C6D);
     background: -moz-linear-gradient(right, #C2BA9B, #5e703d, #818C6D);
-    background: linear-gradient(to right, #C2BA9B, #5e703d, #818C6D);
-    opacity: 0.5;
+    background: linear-gradient(to right, #E3E0CF, #729F98, #DDDFD4);
+    opacity: 0.6;
 }
 
 .space {
