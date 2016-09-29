@@ -31,9 +31,9 @@ html, body {
     text-align: center;
     padding-top: 25px;
     background: #0f587a transparent repeat top left;
-    background: -webkit-linear-gradient(left, #C2BA9B, #5e703d, #818C6D);
-    background: -o-linear-gradient(right, #C2BA9B, #5e703d, #818C6D);
-    background: -moz-linear-gradient(right, #C2BA9B, #5e703d, #818C6D);
+    background: -webkit-linear-gradient(left, #E3E0CF, #729F98, #DDDFD4);
+    background: -o-linear-gradient(right, #E3E0CF, #729F98, #DDDFD4);
+    background: -moz-linear-gradient(right, #E3E0CF, #729F98, #DDDFD4);
     background: linear-gradient(to right, #E3E0CF, #729F98, #DDDFD4);
     opacity: 0.6;
 }
@@ -48,9 +48,10 @@ html, body {
 
 /*-------Portfolio-------*/
 
-.emart {
+.emart, .goly {
     margin: 60px 0;
 }
+
 
 /*-------Home-Formvalidation-------*/
 
