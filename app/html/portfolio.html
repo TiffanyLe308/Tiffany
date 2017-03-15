@@ -1,0 +1,31 @@
+
+<!-- <hr/>
+<strong>This page shows multiple named views in action.</strong>
+
+<div class="row">
+    <div class="col-sm-6">
+      <div class="panel panel-default" ui-view="view1"></div>
+    </div>
+    <div class="col-sm-6">
+      <div class="panel panel-default" ui-view="view2"></div>
+    </div>
+</div> -->
+
+<div class="container">
+  <h1>My latest works</h1>
+  <div class="row list" ng-repeat="list in lists">
+    <div class="col-sm-6">
+      <img class="img-responsive" ng-src="{{ list.image }}"/>
+    </div>
+    <div class="col-sm-6">
+      </br></br>
+      <p> <a href="{{ list.link }}" target="_blank">{{ list.title }}</a> {{ list.description_one }} </p>
+      <p> {{ list.detail_one }} </p>
+      <p> {{ list.detail_two }} </p>
+      <p> {{ list.detail_three }} </p>
+      <p> {{ list.description_two }} </p>
+    </div>
+  </div>
+
+
+</div>
