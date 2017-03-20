@@ -52,7 +52,6 @@ html, body {
     margin: 60px 0;
 }
 
-
 /*-------Home-Formvalidation-------*/
 
 
@@ -64,15 +63,55 @@ html, body {
     border-color: blue;
 }
 
+.submit {
+  background-color: #729F98;
+}
+
+/*-------firstcase-------*/
+
+.introduction-background {
+  height: 400px;
+  background-image: url("../images/img_1.jpg");
+	background-repeat:  no-repeat;
+  background-position: center;
+  min-width: 100%;
+  margin-top: 50px;
+}
+
+.commentSubmit {
+  padding-top: 10px;
+}
+
+.comment {
+  margin-top: 5px;
+}
+
+.commentMenu textarea {
+  width: 100%;
+}
+
+.google-map {
+  height: 400px;
+}
+
 /*-------Footer-------*/
 
+.row {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .social-icons {
-    height: 100px;
     background-color: #729F98;
-    margin-top: 100px;
-    padding-top: 30px;
+    margin-top: 60px;
+    padding-top: 15px;
+    padding-bottom: 5px;
 }
 
 .social-icons a {
     color: #ffffff;
+}
+
+.social-icons a:hover {
+    color: #545353;
 }
