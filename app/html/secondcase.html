@@ -7,7 +7,7 @@
         <p>You can put them into the basket by clicking the "Add" button next to them<br/></p>
         <p>Finally after having some products in the basket you can order them by clicking "Place Order". This will show an alert with the products that would be ordered</p>
       </div>
-      
+
       <div class="col-md-8">
         <div class="row no-gutter">
           <div class="col-md-4" ng-repeat="book in books">
@@ -16,6 +16,8 @@
               <div class="booklist-text">
                 <h3>{{ book.name }}</h3>
                 <p>{{ book.text }}</p>
+                <p>{{ book.price | currency : "€" }}</p>
+                <p><a href="#/showcase/1">Add</a></p>
               </div>
             </div>
           </div>

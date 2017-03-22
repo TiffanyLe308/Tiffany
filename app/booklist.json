@@ -4,55 +4,64 @@
       "id": "0",
       "name": "A notebook",
       "text": "This is the first description",
-      "image": "https://unsplash.it/500?image=1"
+      "image": "https://unsplash.it/500?image=1",
+      "price": "9.30"
     },
     {
       "id": "1",
       "name": "Rocks on the beach",
       "text": "This is the second description",
-      "image": "https://unsplash.it/500?image=12"
+      "image": "https://unsplash.it/500?image=12",
+      "price": "9.30"
     },
     {
       "id": "2",
       "name": "Creepy forks",
       "text": "This is the third description",
-      "image": "https://unsplash.it/500?image=23"
+      "image": "https://unsplash.it/500?image=23",
+      "price": "9.30"
     },
     {
       "id": "3",
       "name": "Nuclear waste",
       "text": "This is the fourth description",
-      "image": "https://unsplash.it/500?image=34"
+      "image": "https://unsplash.it/500?image=34",
+      "price": "9.30"
     },
     {
       "id": "4",
       "name": "An unsafe car",
       "text": "This is the fifth description",
-      "image": "https://unsplash.it/500?image=45"
+      "image": "https://unsplash.it/500?image=45",
+      "price": "9.30"
     },
     {
       "id": "5",
       "name": "A broken lens",
       "text": "This is the sixth description",
-      "image": "https://unsplash.it/500?image=56"
+      "image": "https://unsplash.it/500?image=56",
+      "price": "9.30"
     },
     {
       "id": "6",
       "name": "A panoramic view",
       "text": "This is the seventh description",
-      "image": "https://unsplash.it/500?image=67"
+      "image": "https://unsplash.it/500?image=67",
+      "price": "9.30"
     },
     {
       "id": "7",
       "name": "An old door",
       "text": "This is the eighth description",
-      "image": "https://unsplash.it/500?image=78"
+      "image": "https://unsplash.it/500?image=78",
+      "price": "9.30"
     },
     {
       "id": "8",
       "name": "Grass",
       "text": "This is the ninth description",
-      "image": "https://unsplash.it/500?image=89"
+      "image": "https://unsplash.it/500?image=89",
+      "price": "9.30"
     }
   ]
 }
