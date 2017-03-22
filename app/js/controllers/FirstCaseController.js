@@ -4,22 +4,22 @@ app.controller('FirstCaseController', ['$scope', '$http', 'cart', 'weather', fun
   });
 
   $scope.map = {
-  center: [39, -121],
-  options: function() {
-    return {
-      streetViewControl: false,
-      scrollwheel: false
+    center: [39, -121],
+    options: function() {
+      return {
+        streetViewControl: false,
+        scrollwheel: false
+      }
     }
-  }
-};
+  };
 
-$scope.marker = {
-  position: [39, -121],
-  decimals: 4,
-  options: function() {
-    return { draggable: true };
-  }
-}
+  $scope.marker = {
+    position: [39, -121],
+    decimals: 4,
+    options: function() {
+      return { draggable: true };
+    }
+  };
 
   $scope.shopItem = cart.getItems();
   if(!$scope.shopItem || $scope.shopItem.length == 0) {

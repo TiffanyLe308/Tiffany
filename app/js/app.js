@@ -37,7 +37,8 @@ var app = angular.module('myApp',['ui.router',
       })
       .state('showcasesecond', {
         url: '/showcase/1',
-        templateUrl: 'secondcase.html'
+        templateUrl: 'secondcase.html',
+        controller: 'SecondCaseController'
       })
   }]);
 

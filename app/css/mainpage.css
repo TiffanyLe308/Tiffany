@@ -94,6 +94,56 @@ html, body {
   height: 400px;
 }
 
+/*-------secondcase-------*/
+
+.second-booklist {
+  position: relative;
+  text-align: center;
+  display: block;
+}
+
+.second-booklist h3 {
+  position: absolute;
+  top: 10px;
+  left: 15%;
+  width: 70%;
+}
+
+.second-booklist p {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  width: 70%;
+}
+
+.booklist-text {
+  background-color: rgba(0,0,0,0.8);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.booklist-text:hover {
+  opacity: 1;
+}
+
+.booklist-text h3, .booklist-text p {
+  color: white;
+}
+
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+
 /*-------Footer-------*/
 
 .row {
