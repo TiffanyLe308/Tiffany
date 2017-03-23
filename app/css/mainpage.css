@@ -96,6 +96,21 @@ html, body {
 
 /*-------secondcase-------*/
 
+.second-showcase {
+  padding-top: 50px;
+}
+
+.intro-second {
+  background-color: #f2f2f2;
+  padding: 20px 15px;
+  margin-bottom: 20px;
+}
+
+.checkout {
+  background-color: #f2f2f2;
+  padding-top: 20px;
+}
+
 .second-booklist {
   position: relative;
   text-align: center;
@@ -104,16 +119,16 @@ html, body {
 
 .second-booklist h3, .second-booklist p {
   position: absolute;
-  left: 15%;
-  width: 70%;
+  left: 10%;
+  width: 80%;
 }
 
 .second-booklist p:nth-child(2)  {
-  top: 35%;
+  top: 40%;
 }
 
 .second-booklist p:nth-child(3)  {
-  top: 60%;
+  top: 65%;
 }
 .second-booklist p:nth-child(4)  {
   top: 80%;
@@ -154,6 +169,10 @@ html, body {
   opacity: 0.7;
 }
 
+.bookname {
+  font-size: 18px;
+}
+
 .no-gutter > [class*='col-'] {
   padding-right:0;
   padding-left:0;
@@ -179,4 +198,27 @@ html, body {
 
 .social-icons a:hover {
     color: #545353;
+}
+
+/*--------MediaQueries-------*/
+
+@media (max-width: 480px) {
+  .checkout {
+    margin-top: 20px;
+  }
+  .cart-image {
+    width: 50%;
+  }
+  .second-booklist h3, .second-booklist p {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .checkout {
+    margin-top: 20px;
+  }
+  .cart-image {
+    width: 40%;
+  }
 }

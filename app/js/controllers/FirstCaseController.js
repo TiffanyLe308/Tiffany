@@ -106,10 +106,10 @@ app.service('cart', function() {
 
   function calculateTotal() {
     var i, item;
-    sum = 0;
+    sum = 0; //reset sums
     for (i = 0; i < selectedItems.length; i++) {
       item = selectedItems[i];
-      sum += item.prices * item.quantity; //reset sums
+      sum += item.prices * item.quantity;
     }
   }
 

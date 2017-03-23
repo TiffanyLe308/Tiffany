@@ -1,31 +1,70 @@
 <div class="container">
-  <h3>Coming soon</h3>
   <div class="row">
     <div class="second-showcase">
       <div class="col-md-2">
-        <p>Please click the "Load latest products" button to load the products <br/></p>
-        <p>You can put them into the basket by clicking the "Add" button next to them<br/></p>
-        <p>Finally after having some products in the basket you can order them by clicking "Place Order". This will show an alert with the products that would be ordered</p>
+        <div class="intro-second">
+          <p>Please click the "Load latest products" button to load the products <br/></p>
+          <p>You can put them into the basket by clicking the "Add" button next to them<br/></p>
+          <p>Finally after having some products in the basket you can order them by clicking "Place Order". This will show an alert with the products that would be ordered</p>
+        </div>
       </div>
 
-      <div class="col-md-8">
+      <div class="col-md-7">
         <div class="row no-gutter">
-          <div class="col-md-4" ng-repeat="book in books">
+          <div class="col-xs-6 col-md-4" ng-repeat="book in books">
             <div class="second-booklist">
               <img class="img-responsive" ng-src="{{ book.image }}"  />
               <div class="booklist-text">
                 <h3>{{ book.name }}</h3>
                 <p>{{ book.text }}</p>
                 <p>{{ book.price | currency : "€" }}</p>
-                <p><a href="#/showcase/1">Add</a></p>
+                <p><a href="#/showcase/1" ng-click="addToCart(book)">Add</a></p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="col-md-2">
+      <div class="col-xs-12 col-md-3 checkout">
+        <!-- <div class="row" ng-repeat="book in myCart">
+            <div class="col-md-4">
+              <div class="mycart">
+                <img class="img-responsive" ng-src="{{ book.image }}" />
+              </div>
+            </div>
 
+            <div class="col-md-5">
+              <p class="bookname">{{ book.name }}</p>
+            </div>
+
+            <div class="col-md-3">
+              <p>{{ book.price | currency : "€" }}</p>
+            </div>
+          </div>
+
+        <div class="row">
+          <div class="total">
+            <div class="col-md-3 col-md-offset-9">
+              <strong>Total</strong>
+              <strong>{{getTotal() | currency: "€"}}</strong>
+            </div>
+          </div>
+        </div> -->
+
+        <table class="table">
+          <tbody>
+            <tr ng-repeat="book in myCart">
+              <td><img class="img-responsive cart-image" ng-src="{{ book.image }}" /></td>
+              <td><p class="bookname">{{ book.name }}</p></td>
+              <td><p>{{ book.price | currency : "€" }}</p></td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td><strong>Total</strong></td>
+              <td><strong>{{getTotal() | currency: "€"}}</strong></td>
+            </tr>
+        </table>
       </div>
     </div>
   </div>
