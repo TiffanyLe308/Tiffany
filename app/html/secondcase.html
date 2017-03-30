@@ -27,30 +27,6 @@
       </div>
 
       <div class="col-xs-12 col-md-3 checkout">
-        <!-- <div class="row" ng-repeat="book in myCart">
-            <div class="col-md-4">
-              <div class="mycart">
-                <img class="img-responsive" ng-src="{{ book.image }}" />
-              </div>
-            </div>
-
-            <div class="col-md-5">
-              <p class="bookname">{{ book.name }}</p>
-            </div>
-
-            <div class="col-md-3">
-              <p>{{ book.price | currency : "€" }}</p>
-            </div>
-          </div>
-
-        <div class="row">
-          <div class="total">
-            <div class="col-md-3 col-md-offset-9">
-              <strong>Total</strong>
-              <strong>{{getTotal() | currency: "€"}}</strong>
-            </div>
-          </div>
-        </div> -->
 
         <table class="table">
           <tbody>
@@ -58,6 +34,7 @@
               <td><img class="img-responsive cart-image" ng-src="{{ book.image }}" /></td>
               <td><p class="bookname">{{ book.name }}</p></td>
               <td><p>{{ book.price | currency : "€" }}</p></td>
+              <td><a href ng-click="removeItem($index)">X</a></td>
             </tr>
 
             <tr>

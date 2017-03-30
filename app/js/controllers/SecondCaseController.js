@@ -14,6 +14,12 @@ app.controller("SecondCaseController", ['$scope', '$http', function($scope, $htt
     $scope.amount += book.price;
   };
 
+  $scope.removeItem = function (index) {
+    if (index > -1) {
+      $scope.myCart.splice(index, 1);
+    };
+  };
+
   $scope.getTotal = function(){
     var total = 0;
     for(var i = 0; i < $scope.myCart.length; i++){
