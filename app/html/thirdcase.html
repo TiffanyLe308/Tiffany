@@ -1,0 +1,145 @@
+<div id="thirdCase" class="third-case container">
+  <div class="homeslide-carousel">
+    <carousel interval="homeInterval">
+      <slide ng-repeat="homeslide in homeslides" active="homeslide.active">
+        <div class="homeslide">
+            <img class="img-responsive" ng-src="{{ homeslide.image }}">
+        </div>
+      </slide>
+    </carousel>
+  </div>
+
+  <div class="home-background"></div>
+  <a id="return-to-top" href="" scroll-on-click><i class="icon-chevron-up"></i></a>
+
+  <div id="home" class="introduction">
+    <div class="container">
+      <div class="intro space">
+        <h1>Welcome To Our Bike Club</h1>
+        <p>
+          Bikes Ltd is launching a brand new product on December 5th.
+          The new product is called BikeX and it will be the first of it's kind on the market.<br />
+          The development and design of BikeX started in 2004, and now it’s fully functioning and ready to take over the world.
+        </p>
+      </div>
+
+      <div class="menu-categories space">
+        <div class="row">
+          <div class="col-md-4 space" ng-repeat="menu in menus">
+            <img class="img-responsive" ng-src="{{ menu.image }}" />
+            <h3>{{ menu.name }}</h3>
+            <p>{{ menu.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="introduction-background space">
+    <div class="container">
+      <div class="slogan">
+        <h1>
+          Get a bike, <br /> Get a life
+        </h1>
+      </div>
+    </div>
+  </div>
+
+  <div id="ourproduct" class="container">
+    <div class="options">
+      <h1>Customizing Options</h1>
+      <p class="space">
+        The bike comes in 6 different colors: white, blue, pink, beige, green and gold. You can also tune the number of gears for your bike: 3, 5 or 9. T
+        here are two different models at the moment, one for the ladies and one for the sirs.
+        Choose your own additional equipment: Do you want a trunk in the back or a basket in the front? You got it! You can also pick and choose from a wide variety of lights, saddles, handles, and more.
+      </p>
+
+      <div class="technical">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="menu_gallery">
+              <carousel interval="menuInterval">
+                <slide ng-repeat="menuslide in menuslides" active="menuslide.active">
+                  <div class="thumbnail">
+                    <a href="{{menuslide.image}}" data-lightbox="roadtrip">
+                      <img class="img-responsive" ng-src="{{menuslide.image}}">
+                    </a>
+                  </div>
+                </slide>
+              </carousel>
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Specifications</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr ng-repeat="service in services ">
+                  <td>{{ service.name }}</td>
+                  <td>{{ service.description }}</td>
+                </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="order space">
+      <h1>Availability</h1>
+      <p>
+        If you want to be among the first to receive the product, place your order now!
+        Once it's launched, you can buy the bike at all designated retailers around the world. Store locations: Helsinki, London, Paris, Tokyo, New York.
+      </p>
+      <p>
+        Bikes Ltd is an innovative bicycle manufacturer, founded in 2012. Working around the world, Bikes Ltd comes up with new concepts improve the lives of bicyclists.
+        Continuously developing their products and making new innovations, Bikes Ltd has been able to conquer the world with their fresh insights and awesomeness.
+      </p>
+    </div>
+
+    <div id="ourevent" class="about-event space">
+      <div id="contactus" class="row">
+        <div class="col-md-6">
+          <h1>Latest Events</h1>
+          <div class="row" ng-repeat="event in events">
+            <div class="col-md-4 space">
+              <div class="date">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>{{ event.date }}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>{{ event.month }}</td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <h4>{{ event.name }}</h4>
+              <p>{{ event.description }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <h1>About Us</h1>
+          <p>
+            Bike Ltd started in 1982 with one goal: Create a better cycling experience for people around the world. <br />
+            The founders of Bike were craftsmen and engineers. They understood their strengths. So to make cycling more enjoyable and accessible to people around the world, they did what they knew best. <br />
+            They set out to improve the cycling experience by following three guiding principles: craftsmanship, innovation and inspiration.<br />
+            Over the last three decades, Bike has grown well beyond its manufacturing roots to manufacture quality bicycles and gears.
+          </p>
+          <h2 class="slogan pull-right">Ride Life, Ride Bike.</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

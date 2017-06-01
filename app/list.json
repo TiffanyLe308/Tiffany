@@ -10,4 +10,11 @@
     "description": "Design a book shopping list",
     "image": "../images/Pic_18.jpg",
     "url": "1"
+},
+{
+    "title": "BikeX",
+    "id": "3",
+    "description": "Design a bike website to promote its new product",
+    "image": "../images/Pic_20.jpg",
+    "url": "2"
 }]

@@ -1,69 +1,21 @@
+<div class="container" ng-controller="PortfolioController">
+  <div class="row" ng-repeat="blog in blogs">
+    <div class="blog">
+      <div class="col-md-5">
+        <img class="img-responsive" ng-src="{{ blog.image }}"/>
+      </div>
 
-<div class="space"></div>
-
-<div class="container">
-  <div class="section">
-    <div class="row">
-        <div class="col-md-6 left">
-          <img class="img-responsive" src="../images/Pic_6.jpg"/>
+      <div class="col-md-6">
+        <h2><strong>{{ blog.title_one }}</strong></h2>
+        <p>{{ blog.description_one }}</p>
+        <a href="#"><strong>See more</strong></a>
+        <div class="col-md-6 col-md-offset-6">
+          <h3 class="pull-right"><em>{{ blog.title_two }}</em></h3>
         </div>
-
-        <div class="col-md-6">
-          <h2><strong>Makeup products</strong></h2>
-          <p>Check out our Best of Beauty and Readers' Choice beauty awards to
-          discover the winning beauty products in every category: hair, makeup, fragrance.</p>
-          <a href="#"><strong>See more</strong></a>
-
-          <div class="pull-right">
-            <h2 class="pull-right"><em>Style yourself</em></h2>
-            <p class="pull-right"><em>You are in a beauty contest every day of your life.</em></p>
-          </div>
+        <div class="pull-right">
+          <p><em>{{ blog.description_two }}</em></p>
         </div>
+      </div>
     </div>
-  </div>
-
-  <div class="space1"></div>
-
-  <div class="section1">
-    <div class="row">
-        <div class="col-md-6">
-          <h2><strong>Skincare products</strong></h2>
-          <p>Healthy skin starts with a regular skin care regimen, using high quality products every day.
-             Purifying cleansers, refreshing toners and hydrating moisturizers cover the basics for the face.</p>
-          <a href="#"><strong>See more</strong></a>
-          </br>
-          <div class="pull-right">
-            <h2 class="pull-right"><em>Be yourself</em></h2></br></br></br>
-            <p><em>Be bold. Be daring. Be simply beautiful.</em></p>
-          </div>
-        </div>
-
-        <div class="col-md-6 right">
-          <img class="img-responsive" src="../images/Pic_8.jpg"/>
-        </div>
-    </div>
-  </div>
-
-  <div class="space1"></div>
-
-  <div class="section2">
-     <div class="row">
-         <div class="col-md-6 left2">
-             <img class="img-responsive" src="https://s-media-cache-ak0.pinimg.com/564x/46/14/97/4614970fcc8742427db942e7fd0dfb3f.jpg"/>
-         </div>
-
-         <div class="col-md-6">
-             <h2><strong>Beauty gadgets</strong></h2>
-             <p>Whether you want to get rid of acne, smooth wrinkles or detox your pores, these at-home beauty gadgets can help</p>
-             <a href="#"><strong>See more</strong></strong></a></br>
-
-             <div class="pull-right">
-               <h2 class="pull-right"><em>Its tools time</em></h2></br>
-               <p class="pull-right"><em>There is no such thing as natural beauty.</em></p>
-             </div>
-         </div>
-     </div>
   </div>
 </div>
-
-<div class="space"></div>

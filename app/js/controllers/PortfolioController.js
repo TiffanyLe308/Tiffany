@@ -1,12 +1,20 @@
 app.controller('PortfolioController', ['$scope', function($scope) {
   $scope.lists = [
     {
-      image: '../images/Pic_17.jpg',
+      image: '../images/Pic_16.jpg',
       title: 'TastyPastry',
       link: 'http://goliathservice.com/#!/home',
       description_one: ' is a bakery shop where cake consultants and decorators will create the perfect cake for customers',
       description_two: 'The project mainly uses HTML5, CSS3, Bootstrap 3, Javascript, AngularJS.',
       detail_one: 'Giving a wonderful piece of art and truly experience its taste, TastyPastry shop tries to make your special event a memorable day.'
+    },
+    {
+      image: '../images/Pic_21.jpg',
+      title: 'BeanCorner',
+      link: 'http://bileltd.org/',
+      description_one:' is a website that presents BeanCorner store.',
+      description_two:' Introduce about their coffee as well as sharing their interest in coffee with the customers.',
+      detail_one: 'I used mostly HTML5, CSS3, Bootstrap 3, Javascript, AngularJS to complete this website.'
     },
     {
       image: '../images/Pic_12.jpg',
@@ -39,6 +47,30 @@ app.controller('PortfolioController', ['$scope', function($scope) {
       title: 'My Portfolio',
       link: 'http://www.tiffanywpportfolio.com/',
       description_one:' is my own website written based on Wordpress.'
+    }
+  ];
+
+  $scope.blogs = [
+    {
+      image: '../images/Pic_6.jpg',
+      title_one: 'Makeup products',
+      title_two: 'Style yourself',
+      description_one: 'Check out our Best of Beauty and Readers\'\ Choice beauty awards to discover the winning beauty products in every category: hair, makeup, fragrance.',
+      description_two: 'You are in a beauty contest every day of your life.'
+    },
+    {
+      image: '../images/Pic_8.jpg',
+      title_one: 'Skincare products',
+      title_two: 'Be yourself',
+      description_one: 'Healthy skin starts with a regular skin care regimen, using high quality products every day.Purifying cleansers, refreshing toners and hydrating moisturizers cover the basics for the face.',
+      description_two: 'Be bold. Be daring. Be simply beautiful.'
+    },
+    {
+      image: '../images/Pic_19.jpg',
+      title_one: 'Beauty gadgets',
+      title_two: 'Its tools time',
+      description_one: 'Whether you want to get rid of acne, smooth wrinkles or detox your pores, these at-home beauty gadgets can help',
+      description_two: 'There is no such thing as natural beauty.'
     }
   ];
 }]);

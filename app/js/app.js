@@ -1,6 +1,8 @@
 var app = angular.module('myApp',['ui.router',
                                   'ngMessages',
-                                  'ngMaps']);
+                                  'ngMaps',
+                                  'ngAnimate',
+                                  'ui.bootstrap']);
 
   app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
     // For any unmatched url, send to /home
@@ -40,6 +42,11 @@ var app = angular.module('myApp',['ui.router',
         templateUrl: 'secondcase.html',
         controller: 'SecondCaseController'
       })
+      .state('showcasethird', {
+        url: '/showcase/2',
+        templateUrl: 'thirdcase.html',
+        controller: 'ThirdCaseController'
+      })
   }]);
 
   app.controller('formController', function() {});
@@ -48,5 +55,23 @@ var app = angular.module('myApp',['ui.router',
     $http.get('../list.json').then(function(response) {
       $scope.cases = response.data;
       // $scope.caseId = response.data[$stateParams.showcaseId];
+    });
+
+    app.directive('scrollOnClick', function() {
+      return {
+        restrict: 'A',
+        link: function(scope, $elm, attrs) {
+          var idToScroll = attrs.href;
+          $elm.on('click', function() {
+            var $target;
+            if (idToScroll) {
+              $target = $(idToScroll);
+            } else {
+              $target = $elm;
+            }
+            $("html, #thirdCase").animate({scrollTop: 0}, "slow");
+          });
+        }
+      }
     });
   }]);
