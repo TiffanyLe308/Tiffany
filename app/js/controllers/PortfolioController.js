@@ -12,9 +12,9 @@ app.controller('PortfolioController', ['$scope', function($scope) {
       image: '../images/Pic_21.jpg',
       title: 'BeanCorner',
       link: 'http://bileltd.org/',
-      description_one:' is a website that presents BeanCorner store.',
-      description_two:' Introduce about their coffee as well as sharing their interest in coffee with the customers.',
-      detail_one: 'I used mostly HTML5, CSS3, Bootstrap 3, Javascript, AngularJS to complete this website.'
+      description_one:' is a website that presents a coffee shop.',
+      description_two:'I used mostly HTML5, CSS3, Bootstrap 3, Javascript, AngularJS to complete this website.',
+      detail_one: 'Introducing about their coffee as well as sharing their interest in coffee with the customers.'
     },
     {
       image: '../images/Pic_12.jpg',
